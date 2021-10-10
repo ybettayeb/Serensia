@@ -64,3 +64,7 @@ class testCheckSum(unittest.TestCase):
         actual = computeCheckSum([0])
         expected = 0
         self.assertEqual(actual,expected)
+
+
+if __name__ == '__main__':
+    unittest.main()      
