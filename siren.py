@@ -9,7 +9,8 @@ def computeCheckSum(digits):
     EvenDigits = digits[0::2] # On commence à 0 avec un pas de 2
     oddDigits = digits[1::2] # On commence à 1 avec un pas de 2
     # print(EvenDigits,oddDigits)
-    for digit in oddDigits: # là ou c'est sournois c'est qu'on compte à partir de l'index 1 en partant de la droite donc les nombres en position paire en index 0 sont en position impaire en index 1
+    for digit in oddDigits: # là ou c'est sournois c'est qu'on compte à partir de l'index 1 en partant de la droite donc les nombres en position paire en index 0 
+        #sont en position impaire en index 1
         prod = numberToDigits(digit*2)
         runningSum += sum(prod) 
     runningSum += sum(EvenDigits)
