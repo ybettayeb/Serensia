@@ -28,7 +28,9 @@ def computeFullSiren(number):
     checksum = computeCheckSum(digits) % 10 
     if checksum == 0:
         res = str(number)+"0"
-        return int(res) # double cast, c'est moche mais c'est le seul moyen de modifier un entier, je pourrais simplifier tout ça en restant avec des strings
+        return int(res) # double cast, c'est moche mais c'est le seul moyen de modifier un entier, je pourrais simplifier tout ça en restant avec des strings 
+        #en me relisant je viens de me rendre compte qu'il suffit de multiplier par 10, pas très malin de ma part de passer un double cast
+        # Je laisse ma solution actuelle parce que c'est ce que j'avais envoyé 
     else:
         res = str(number)+ str(10 - checksum) # le chiffre de controle est égale à 10 - somme % 10 
         return int(res)
